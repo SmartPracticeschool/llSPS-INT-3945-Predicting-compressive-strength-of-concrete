@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Concrete Strength</title>
+		<meta charset = "UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+
+<body>
+	<p>
+		<h1>Welcome to Determination of Compressive Strength of Concrete!</h1>
+		<h3>Fill the details of the Cement to know its compressive strength.</h3>
+	</p>
+
+	<div class="container">
+		<form action="/strength" method="POST">
+			<div class="form-group">
+				<label for="Cement">Enter Cement value:</label>
+				<input type="number" step="any" min="0" name="cement" class="form-control" id="cement"></input>
+				<label for="slag">Enter Blast Furnance Slag value:</label>
+				<input type="number" step="any" min="0" name="slag" class="form-control" id="slag"></input>
+				<label for="ash">Enter Fly Ash value:</label>
+				<input type="number" step="any" min="0" name="ash" class="form-control" id="ash"></input>
+				<label for="water">Enter Water value:</label>
+				<input type="number" step="any" min="0" name="water" class="form-control" id="water"></input>
+				<label for="plastic">Enter Superplasticizer value:</label>
+				<input type="number" step="any" min="0" name="plastic" class="form-control" id="plastic"></input>
+				<label for="coarse">Enter Coarse Aggregate value:</label>
+				<input type="number" step="any" min="0" name="coarse" class="form-control" id="coarse"></input>
+				<label for="fine">Enter Fine Aggregate value:</label>
+				<input type="number" step="any" min="0" name="fine" class="form-control" id="fine"></input>
+				<label for="age">Enter Age value:</label>
+				<input type="number" step="any" min="0" name="age" class="form-control" id="age"></input>
+			<button type="submit" class="btn btn-info">Show Strength</button>
+		</form>
+	</div>
+
+	<div class="container">
+		<div class="well"><p>The Compressive Strength of Concrete is:</p><strong>{{ prediction }}</strong></div>
+	</div>
+
+</body>
+</html>
